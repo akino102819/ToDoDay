@@ -1,0 +1,36 @@
+.topPage {
+  min-height: 93vh;
+  padding-top: 30px;
+  background: #e7e9e8;
+  overflow-x: scroll;
+  .listWrapper {
+    height: 100%;
+    align-items: baseline;
+    .list {
+      position: relative;
+      background: #ffffff;
+      padding: 10px;
+      margin: 20px;
+      min-width: 250px;
+      &:last-child {
+        margin-right: 20px;
+      }
+      &_header {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &_title {
+          font-size: 20px;
+          margin: 0;
+        }
+        &_action {
+          .fa-pen, .fa-trash {
+            font-size: 18px;
+            color: #8c8c8c;
+          }
+        }
+      }
+    }
+  }
+}
