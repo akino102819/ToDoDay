@@ -17,17 +17,23 @@
       }
       &_header {
         margin-bottom: 20px;
-        display: flex;
         align-items: center;
         justify-content: space-between;
         &_title {
+          overflow-x: scroll;
           font-size: 20px;
+          width: 150px;
           margin: 0;
         }
         &_action {
+          margin-top: 5px;
           .fa-pen, .fa-trash {
+            vertical-align:text-bottom;
             font-size: 18px;
             color: #8c8c8c;
+          }
+          .fa-trash {
+            margin: 0 10px;
           }
         }
       }
