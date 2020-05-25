@@ -39,8 +39,9 @@ class CardsController < ApplicationController
   def sort
     card = Card.find(params[:id])
     card.update(card_params)
-    render nothing:true
+    render head :ok
   end
+  
   private
     def card_params
       params.require(:card).permit(:title, :memo, :list_id, :row_order_position)
