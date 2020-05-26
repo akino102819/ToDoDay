@@ -30,13 +30,18 @@ class ListsController < ApplicationController
     redirect_to :root
   end
 
+  def sort
+    list = List.find(params[:id])
+    list.update(list_params)
+    render head :ok
+  end
+
   private
     def list_params
-      params.require(:list).permit(:title).merge(user: current_user)
+      params.require(:list).permit(:title, :row_order_position).merge(user: current_user)
     end  
 
     def set_list
       @list = List.find_by(id: params[:id])
     end
- 
 end

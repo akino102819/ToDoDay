@@ -1,7 +1,7 @@
 <div class="topPage">
-  <div class="listWrapper">
+  <div class="listWrapper table-sortable">
     <% @lists.each do |list|%>
-      <div class="list">
+      <div class="list item"(data = {model_name: card.class.name.underscore, update_url: list_sort_path(card)})>
         <div class="list_header">
           <h2 class="list_header_title"><%= list.title %></h2>
           <div class="list_header_action">
