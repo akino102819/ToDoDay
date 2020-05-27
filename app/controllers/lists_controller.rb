@@ -31,8 +31,8 @@ class ListsController < ApplicationController
   end
 
   def sort
-    list = List.find(params[:id])
-    list.update(list_params)
+    list = List.find(params[:list_id])
+    list.update!(list_params)
     render head :ok
   end
 
