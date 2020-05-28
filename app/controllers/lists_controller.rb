@@ -33,7 +33,7 @@ class ListsController < ApplicationController
   def sort
     list = List.find(params[:list_id])
     list.update!(list_params)
-    render  body: nil
+    render body: nil
   end
 
   private
