@@ -1,7 +1,7 @@
 <div class="topPage">
   <div class="listWrapper table-sortable">
     <% @lists.each do |list|%>
-      <div class="list item"(data = {model_name: card.class.name.underscore, update_url: list_sort_path(card)})>
+      <%= content_tag "div", class:"list item",data:{model_name: list.class.name.underscore , update_url: list_sort_path(list)} do %>
         <div class="list_header">
           <h2 class="list_header_title"><%= list.title %></h2>
           <div class="list_header_action">
@@ -16,16 +16,16 @@
         <div class = "cardWrapper table-sortable">
           <% list.cards.each do |card| %>
             <%= link_to list_card_path(list, card),class:"cardDetail_link" do%>
-              <div class="card item", data-model_name= "card.class.name.underscore", data-update_url= list_card_sort_path(card)>
+              <% content_tag "div", class:"card item", data:{model_name: card.class.name.underscore ,update_url: list_card_sort_path(list,card)} do %>
                 <h3 class="card_title"><%= card.title %></h3>
                 <% if card.memo.size > 0 %>
                   <div class="card_detail is-exist"><i class="fas fa-bars"></i></div>
                 <% end %>
-              </div>
+              <% end %>
             <% end %>
           <% end %>
         </div>
-      </div>
+      <%end%>
     <% end %>
   </div>
 </div>
