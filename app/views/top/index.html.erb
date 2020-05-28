@@ -16,7 +16,7 @@
         <div class = "cardWrapper table-sortable">
           <% list.cards.each do |card| %>
             <%= link_to list_card_path(list, card),class:"cardDetail_link" do%>
-              <% content_tag "div", class:"card item", data:{model_name: card.class.name.underscore ,update_url: list_card_sort_path(list,card)} do %>
+              <% content_tag "div", class:"card item",data:{model_name: card.class.name.underscore ,update_url: list_card_sort_path(list,card)} do %>
                 <h3 class="card_title"><%= card.title %></h3>
                 <% if card.memo.size > 0 %>
                   <div class="card_detail is-exist"><i class="fas fa-bars"></i></div>
