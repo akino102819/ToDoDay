@@ -69,3 +69,4 @@ gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 gem 'pg', group: :production
 gem 'sqlite3', '~>1.3.6', group: :development
+gem 'mini_racer'
